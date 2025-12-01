@@ -4,6 +4,8 @@ import 'package:couldai_user_app/widgets/services_section.dart';
 import 'package:couldai_user_app/widgets/contact_section.dart';
 import 'package:couldai_user_app/widgets/footer.dart';
 import 'package:couldai_user_app/widgets/custom_nav_bar.dart';
+import 'package:couldai_user_app/widgets/stats_section.dart';
+import 'package:couldai_user_app/widgets/features_section.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -11,6 +13,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color(0xFF050505),
       body: Column(
         children: [
           const CustomNavBar(),
@@ -19,6 +22,8 @@ class HomeScreen extends StatelessWidget {
               child: Column(
                 children: const [
                   HeroSection(),
+                  StatsSection(),
+                  FeaturesSection(),
                   ServicesSection(),
                   ContactSection(),
                   Footer(),
